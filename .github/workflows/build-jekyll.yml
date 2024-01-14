@@ -1,5 +1,8 @@
 name: Github Pages
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -20,7 +23,7 @@ jobs:
             ${{ runner.os }}-gems-
 
       # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@master
+      - uses: jeffreytse/jekyll-deploy-action@maste
         with:
           provider: 'github'
           token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
